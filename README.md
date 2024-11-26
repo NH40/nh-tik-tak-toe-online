@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+```.env
+DATABASE_URL="postgresql://postgres:123456@localhost:5432/tik-tak-toe?schema=public"
+MB_URL="amqp://localhost:5672"
+SESSION_SECRET=sdfgasdfasdfasdfasbcsdfasd
+```
 
 ```bash
 npm run dev
