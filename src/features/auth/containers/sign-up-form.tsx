@@ -4,11 +4,11 @@ import { AuthFormLayout } from "../ui/auth-form-layout";
 import { AuthFields } from "../ui/fields";
 import { SubmitButton } from "../ui/submit-button";
 
-import { BottomLink } from "../ui/link";
-import { ErrorMessage } from "../ui/submit-button copy";
+import { routes } from "@/kernel/routes";
 import { useActionState } from "@/shared/lib/react";
 import { SignUnFormState, signUpAction } from "../actions/sign-up";
-import { routes } from "@/kernel/routes";
+import { BottomLink } from "../ui/link";
+import { ErrorMessage } from "../ui/submit-button copy";
 
 export function SignUpForm() {
   const [formState, action, isPending] = useActionState(
@@ -18,16 +18,16 @@ export function SignUpForm() {
 
   return (
     <AuthFormLayout
-      title="Sign Up"
-      description="Create your account to get started"
+      title="Регистрация"
+      description="Создайте свою учетную запись, чтобы начать"
       action={action}
       fields={<AuthFields {...formState} />}
-      actions={<SubmitButton isPending={isPending}>Sign Up</SubmitButton>}
+      actions={<SubmitButton isPending={isPending}>Регистрация</SubmitButton>}
       error={<ErrorMessage error={formState.errors?._errors} />}
       link={
         <BottomLink
-          text="Already have an account?"
-          linkText="Sign in"
+          text="У вас уже есть аккаунт?"
+          linkText="Войти"
           url={routes.signIn()}
         />
       }

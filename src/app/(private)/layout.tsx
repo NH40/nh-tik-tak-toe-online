@@ -15,7 +15,7 @@ export default async function PrivateLayout({
   return (
     <div className="flex flex-col grow">
       <header className="px-10 py-4 flex flex-row gap-4 justify-between border-b border-b-primary/50 items-center">
-        <div className="text-xl">Tik-tak-toe-online</div>
+        <div className="text-xl">NH Крестики нолики онлайн</div>
         <div className="flex gap-4 items-center">
           <div className="text-lg">{session.login}</div>
           <form
@@ -25,7 +25,7 @@ export default async function PrivateLayout({
               redirect(routes.signIn());
             }}
           >
-            <Button>Sign out</Button>
+            <Button>Выход</Button>
           </form>
         </div>
       </header>

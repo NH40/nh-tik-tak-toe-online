@@ -1,6 +1,6 @@
 import { Input } from "@/shared/ui/input";
 import { Label } from "@/shared/ui/label";
-import React, { useId } from "react";
+import { useId } from "react";
 
 export function AuthFields({
   errors,
@@ -17,24 +17,24 @@ export function AuthFields({
   return (
     <>
       <div className="space-y-2">
-        <Label htmlFor={loginId}>Login</Label>
+        <Label htmlFor={loginId}>Email</Label>
         <Input
           id={loginId}
           type="login"
           name="login"
-          placeholder="Enter your login"
+          placeholder="Введите email"
           required
           defaultValue={formData?.get("login")?.toString()}
         />
         {errors?.login && <div>{errors.login}</div>}
       </div>
       <div className="space-y-2">
-        <Label htmlFor={passwordId}>Password</Label>
+        <Label htmlFor={passwordId}>Пароль</Label>
         <Input
           id={passwordId}
           type="password"
           name="password"
-          placeholder="Enter your password"
+          placeholder="Введите пароль"
           required
           defaultValue={formData?.get("password")?.toString()}
         />
