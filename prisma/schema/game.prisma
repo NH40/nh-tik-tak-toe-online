@@ -1,0 +1,17 @@
+model Game {
+  id      String       @id @default(cuid())
+  status  GameStatus
+  players GamePlayer[] @relation("players")
+  field   Json?
+
+  winner     GamePlayer? @relation(fields: [winnerId], references: [id])
+  winnerId   String?
+  gameOverAt String?
+}
+
+enum GameStatus {
+  idle
+  inProgress
+  gameOver
+  gameOverDraw
+}

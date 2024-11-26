@@ -1,0 +1,9 @@
+model GamePlayer {
+  id     String @id @default(cuid())
+  gameId String
+  game   Game   @relation("players", fields: [gameId], references: [id])
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+  index  Int
+  Game   Game[]
+}

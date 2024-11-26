@@ -1,0 +1,8 @@
+model User {
+  id           String       @id @default(cuid())
+  login        String
+  rating       Int
+  passwordHash String
+  salt         String       @default("")
+  players      GamePlayer[]
+}
